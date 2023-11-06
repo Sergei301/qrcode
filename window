@@ -1,0 +1,21 @@
+from tkinter import*
+from tkinter import Progressbar
+from tkinter import ttk 
+from tkinter.ttk import Progressbar
+
+window=Tk()
+window.title("Приложение чтения параметров PLC")
+window.geometry('500x500')
+style=ttk.Style()
+style.theme_use('default')
+style.configure("black.Horiizontal.TProgressbar", background='blue')
+bar= Progressbar(window, length=200,style='black.Horiizontal.TProgressbar')
+bar['value']=100
+bar.grid(column=1, row=1)
+btn= Button(window, text= "Pump")
+btn.grid(column=1, row=0)
+btn1 = Button(window, text="Main Engine")
+btn1.grid(column=2,row=0)
+btn2=Button(window, text="die Clamp")
+btn2.grid(column=3, row=0)
+window.mainloop()
